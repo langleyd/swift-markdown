@@ -239,7 +239,7 @@ extension Markup {
     public func child(through path: TypedChildIndexPath) -> Markup? {
         var element: Markup = self
         for pathElement in path {
-            guard pathElement.index <= raw.markup.childCount else {
+            guard pathElement.index <= element.raw.markup.childCount else {
                 return nil
             }
 
